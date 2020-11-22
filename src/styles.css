@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: hidden;}
+
+
+mat-hint span{
+  color: red;
+}
+.container{
+  width: 100%;
+}
+.example-header-image {
+  background-image: url('./assets/head.jpg');
+
+  background-size: cover;
+}
+/* loaders */
+.background {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: #ffffff6b;
+  }
+  .background > .wrapper {
+    position: fixed;
+    top: calc(50% - 30px);
+    left: 50%;
+  }
+  .background > .wrapper > .loading {
+    margin-left: -34px;
+    margin-top: 40px;
+  }
+  @-webkit-keyframes ball-scale-multiple {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 0; }
+    5% {
+      opacity: 1; }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 0; } }
+  @keyframes ball-scale-multiple {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 0; }
+    5% {
+      opacity: 1; }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 0; } }
+  .ball-scale-multiple {
+    position: relative;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  .ball-scale-multiple > div:nth-child(2) {
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s; }
+  .ball-scale-multiple > div:nth-child(3) {
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s; }
+  .ball-scale-multiple > div {
+    background-color: #2B303B;
+    border-radius: 100%;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    left: -30px;
+    top: 0;
+    opacity: 0;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: ball-scale-multiple 1s 0s linear infinite;
+    animation: ball-scale-multiple 1s 0s linear infinite; }
+    
+   /* scrolbar */
+    

@@ -1,0 +1,41 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <button mat-raised-button color="primary" (click)="gotoadd()"> <mat-icon>add</mat-icon>Add New Product</button>
+        </div>
+        <div class="col-sm-3" style="float:right">
+            <mat-form-field class="example-form-field" appearance="outline">
+                <mat-label>Search Product</mat-label>
+                <input matInput type="text" [(ngModel)]="search" name="search"  (keyup)="searchFunction()">
+                <button mat-button *ngIf="search!=''" matSuffix mat-icon-button aria-label="Clear" (click)="search='';searchFunction()">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row scrollbody">
+      <div class="col-sm-4" *ngFor="let data of productList" style="padding-bottom:8px;">
+        <mat-card class="example-card" (click)="gotoOrder(data)">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{data.productName=='&&' ? "No Info" : data.productName}}</mat-card-title>
+              <mat-card-subtitle>Quantity : {{data.availableQuantity}}</mat-card-subtitle>
+              <!-- <button mat-mini-fab color="primary"><mat-icon>minus</mat-icon></button>
+              <button mat-mini-fab color="primary"><mat-icon>plus</mat-icon></button> -->
+            </mat-card-header>
+          
+          </mat-card>
+      </div>
+      <div class="background" *ngIf="loader==true"  >
+        <div class="wrapper">
+          <div class="ball-scale-multiple">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        
+        </div>
+      </div>
+    </div>

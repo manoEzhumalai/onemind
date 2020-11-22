@@ -1,0 +1,32 @@
+.container{
+    height:100%;
+    overflow: hidden;
+}
+.scrollbody{
+    overflow-y: auto;
+    height: calc(100% - 90px);
+}
+  
+ /* scrolbar */
+  
+ .scrollbody::-webkit-scrollbar {
+    width: 10px;
+    background: white !important;
+} 
+  
+  /* Track */
+  .scrollbody::-webkit-scrollbar-track{
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+    background: white !important;
+}
+   
+  /* Handle */
+  .scrollbody::-webkit-scrollbar-thumb{
+    background: #FFAF20 !important;
+    border-radius: 50%;
+}
+  
+  /* Handle on hover */
+  .scrollbody::-webkit-scrollbar-thumb:hover {
+    background: #FFAF20 !important;
+  }

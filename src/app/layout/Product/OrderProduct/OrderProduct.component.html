@@ -1,0 +1,36 @@
+
+<div class="container">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Order Product</mat-card-title>
+      <mat-card-subtitle>Product With Details</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <mat-card-content style="padding-top: 10px;">
+      <mat-list role="list">
+        <mat-list-item role="listitem">Product Name : <span style="background-color: #00AFF2 ;">{{fulldata.name=='&&' ? "No Info" : fulldata.name}}</span></mat-list-item>
+        <mat-list-item role="listitem">Available Quantity :<span style="background-color: #FED650 ;"> {{fulldata.avail_quantity}}</span></mat-list-item>
+        <mat-list-item role="listitem">Product Name : <span style="background-color: #FED650 ;"> {{fulldata.quantity}}</span>
+          <button (click)="productcount(2)">-</button><button (click)="productcount(1)">+</button>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+    <br/>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="submit()">Order</button>
+      <button mat-raised-button color="warn" (click)="close()">Cancel</button>
+    </mat-card-actions>
+  </mat-card>
+  
+</div>
+<div class="background" *ngIf="loader==true"  >
+  <div class="wrapper">
+    <div class="ball-scale-multiple">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  
+  </div>
+</div>

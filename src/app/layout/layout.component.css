@@ -1,0 +1,59 @@
+
+.sidebar {
+  height:100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 35;
+  left: 0;
+  text-align: center;
+  /* border-right: 1px solid #00AFF2; */
+  overflow: hidden;
+  background-image: linear-gradient(#00AFF2 , white,white);
+  /* overflow-y: auto; */
+  /* border-right: 1px;/ */
+  transition: 0.5s;
+  padding-top: 20px;
+}
+.name{
+  display: block;
+  font-weight: 700;
+  font-size: 21px;
+  padding: 17px;
+}
+
+.image img{
+  width: 120px;
+  border-radius: 50%;
+  /* margin: 0px auto; */
+  padding-top: 30px;
+}
+.full{
+  height: calc(100% - 65px);
+margin-top: 65px;
+overflow: hidden;
+}
+mat-toolbar{
+  position: fixed;
+  top: 0;
+  background-color: #00AFF2;
+}
+mat-toolbar button{
+  float: right;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  margin-left: 250px;
+  overflow-x: hidden;
+height: 100%;
+/* margin-top: 65px; */
+  overflow-y: auto;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}

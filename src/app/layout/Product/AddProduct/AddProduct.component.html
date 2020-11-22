@@ -1,0 +1,41 @@
+
+<div class="container">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Add New Product</mat-card-title>
+      <mat-card-subtitle>Product With Details</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <mat-card-content style="padding-top: 10px;">
+      <form [formGroup]="profileForm">
+        <div class="row">
+        <div class="col-md-3">
+          <mat-form-field appearance="outline">
+            <mat-label>Product Name</mat-label>
+            <input matInput type="text" placeholder="Enter Product Name" name="productName" formControlName="productName">
+            <mat-hint *ngIf="f.productName.touched && f.productName.errors" >
+              <span *ngIf="f.productName.touched && f.productName.errors.required">*Enter Product Name</span>
+            </mat-hint> 
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <mat-form-field appearance="outline">
+            <mat-label>Available Quantity</mat-label>
+            <input matInput type="number" placeholder="Enter Quantity" name="availableQuantity" formControlName="availableQuantity">
+            <mat-hint *ngIf="f.availableQuantity.touched && f.availableQuantity.errors" >
+              <span *ngIf="f.availableQuantity.touched && f.availableQuantity.errors.required">*Enter no of Available Quantity</span>
+            </mat-hint> 
+          </mat-form-field>
+        </div>
+        </div>
+      </form>
+    </mat-card-content>
+    <br/>
+    <mat-card-actions>
+      <button mat-raised-button color="primary"  [disabled]="!profileForm.valid" (click)="submit()">Submit</button>
+      <button mat-raised-button color="warn" (click)="close()">Cancel</button>
+    </mat-card-actions>
+  </mat-card>
+  
+</div>
